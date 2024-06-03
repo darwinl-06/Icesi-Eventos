@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.neumorphism-container {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+}
+
+.neumorphism-input {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 10px #bebebe,
+                inset -5px -5px 10px #ffffff;
+}
+
+.neumorphism-button {
+    background-color: #f0f0f0;
+    box-shadow: 5px 5px 10px #bebebe,
+                -5px -5px 10px #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.neumorphism-button:hover {
+    background-color: #e0e0e0;
+}
+
+.truncate-multiline {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Número de líneas antes de truncar */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-clamp: 3; /* Fallback for non-webkit browsers */
+}
