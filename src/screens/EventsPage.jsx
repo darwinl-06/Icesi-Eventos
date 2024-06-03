@@ -153,7 +153,7 @@ const EventsPage = () => {
                               {evento.fecha}
                             </h2>
                           </div>
-                          <h2 className="text-black title-font text-3xl font-medium hover:text-hover-orange">
+                          <h2 className="text-black title-font text-2xl font-medium hover:text-hover-orange">
                             {evento.titulo}
                           </h2>
                           <p className="mt-1 text-lg truncate-multiline">{evento.descripcion}</p>
@@ -194,7 +194,7 @@ const EventsPage = () => {
                             {evento.fecha}
                           </h2>
                         </div>
-                        <h2 className="text-black title-font text-3xl font-medium hover:text-hover-orange">
+                        <h2 className="text-black title-font text-2xl font-medium hover:text-hover-orange">
                           {evento.titulo}
                         </h2>
                         <p className="mt-1 text-lg truncate-multiline">{evento.descripcion}</p>

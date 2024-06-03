@@ -359,7 +359,7 @@ const EventModal = ({ show, onClose, event, onEdit, onMsg }) => {
                         </div>
                     ))
                 ) : (
-                    <p className="text-gray-600">No hay comentarios aún.</p>
+                    <p className="text-gray-600">No hay comentarios todavia. Se él primero!</p>
                 )}
               </div>
               <div className="flex mb-4">
@@ -372,7 +372,7 @@ const EventModal = ({ show, onClose, event, onEdit, onMsg }) => {
                 />
                 <button
                     onClick={handleAddComment}
-                    className="h-10 px-4 bg-blue-600 text-white rounded-r-md hover:bg-blue-700"
+                    className="h-10 px-4 bg-blue-900 text-white rounded-r-md hover:bg-blue-700"
                 >
                   Enviar
                 </button>
@@ -393,21 +393,21 @@ const EventModal = ({ show, onClose, event, onEdit, onMsg }) => {
               {user && user.rol === "ADMIN" && (
                   <Link className="w-full" to={`/InfoPlanView/${event.id}`}>
                     <button className="h-10 w-10 text-white rounded-md">
-                      <MdOutlineModeEditOutline className="mr-3 text-black text-2xl" />
+                      <MdOutlineModeEditOutline className="mr-3 text-gray-600 text-2xl hover:text-gray-800 hover:font-semibold" />
                     </button>
                   </Link>
               )}
               {new Date(event.fecha) > new Date() &&
                   (suscribe ? (
                       <button
-                          className="w-36 h-10 bg-red-500 hover:bg-red-700 text-white rounded-md"
+                          className="w-36 h-10 bg-red-700 hover:bg-red-500 text-white rounded-md"
                           onClick={() => handleDesuscribe(event, user)}
                       >
                         Anular
                       </button>
                   ) : (
                       <button
-                          className="w-40 h-10 bg-green-700 text-white rounded-md hover:bg-green-700"
+                          className="w-40 h-10 bg-green-700 text-white rounded-md hover:bg-green-600"
                           onClick={() => handleSubscribe(event, user)}
                       >
                         Inscribirse

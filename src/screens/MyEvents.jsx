@@ -102,10 +102,10 @@ const MyEvents = () => {
                         {filterData.map(evento => (
                             <div
                                 key={evento.id}
-                                className="lg:flex lg:w-3/4 md:w-full h-60 p-4 w-full rounded-lg shadow-lg border hover:scale-105 transition-all mx-4 mb-8"
+                                className="lg:flex lg:w-3/4 md:w-full p-4 w-full h-72 rounded-lg shadow-lg border hover:scale-105 transition-all mx-4 mb-8"
                                 onClick={() => handleEventClick(evento)}
                             >
-                                <div className="lg:w-1/3 lg:h-auto relative h-48 rounded overflow-hidden">
+                                <div className="lg:w-1/3 relative rounded overflow-hidden">
                                     <img className="object-cover object-center w-full h-full block" src={evento.imagen || 'default-image-url.jpg'} alt={evento.titulo} />
                                 </div>
                                 <div className="lg:w-2/3 lg:pl-8 mt-4 lg:mt-0">

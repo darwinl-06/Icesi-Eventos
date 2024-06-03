@@ -252,10 +252,10 @@ const Modal = ({ show, onClose, onCreate }) => {
                         <input type="text" id="lugarDelEventoCiudad" placeholder="Ciudad del lugar" value={city} onChange={(e) => setCity(e.target.value)} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required />
                     </div>
                     <div className="flex items-center justify-between">
-                        <button type="button" className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onClick={handleClose}>
+                        <button type="button" className="bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onClick={handleClose}>
                             Cancelar
                         </button>
-                        <button type="submit" className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        <button type="submit" className="bg-blue-800 hover:bg-blue-700 text-white h-11 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                             Crear
                         </button>
                     </div>
