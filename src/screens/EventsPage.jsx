@@ -134,10 +134,21 @@ const EventsPage = () => {
                   const name = lugarDelEvento?.name || 'Unknown Venue';
                   const direccion = lugarDelEvento?.direccion || 'Unknown Address';
 
+                  const currentDate = new Date().toISOString().split("T")[0];
+                  const eventDate = evento.fecha;
+                  let eventStatus = "";
+                  if (eventDate < currentDate) {
+                    eventStatus = "Terminado";
+                  } else if (eventDate === currentDate) {
+                    eventStatus = "En curso";
+                  } else {
+                    eventStatus = "Disponible";
+                  }
+
                   return (
                       <div
                           key={evento.id}
-                          className="lg:flex lg:w-3/4 md:w-full p-4 w-full h-64 rounded-lg shadow-lg border hover:scale-105 transition-all mx-4 mb-8"
+                          className="lg:flex lg:w-3/4 md:w-full p-4 w-full h-64 rounded-lg shadow-lg border  hover:scale-105 transition-all mx-4 mb-8"
                           onClick={() => handleEventClick(evento)}
                       >
                         <div className="lg:w-1/3 relative rounded overflow-hidden">
@@ -149,7 +160,12 @@ const EventsPage = () => {
                         </div>
                         <div className="lg:w-2/3 lg:pl-8 mt-4 lg:mt-0">
                           <div className="flex items-center gap-5 justify-between mb-4">
-                            <h2 className="text-black text-xs tracking-widest title-font mb-1">
+                            <h2 className={`text-sm rounded py-1 px-2 w-auto ${eventStatus === "Terminado"
+                                ? "bg-red-500 text-white"
+                                : eventStatus === "En curso"
+                                    ? "bg-yellow-500 text-white"
+                                    : "bg-green-500 text-white"
+                            }`}>
                               {evento.fecha}
                             </h2>
                           </div>
@@ -175,6 +191,17 @@ const EventsPage = () => {
                 const name = lugarDelEvento?.name || 'Unknown Venue';
                 const direccion = lugarDelEvento?.direccion || 'Unknown Address';
 
+                const currentDate = new Date().toISOString().split("T")[0];
+                const eventDate = evento.fecha;
+                let eventStatus = "";
+                if (eventDate < currentDate) {
+                  eventStatus = "Terminado";
+                } else if (eventDate === currentDate) {
+                  eventStatus = "En curso";
+                } else {
+                  eventStatus = "Disponible";
+                }
+
                 return (
                     <div
                         key={evento.id}
@@ -190,7 +217,12 @@ const EventsPage = () => {
                       </div>
                       <div className="lg:w-2/3 lg:pl-8 mt-4 lg:mt-0">
                         <div className="flex items-center gap-5 justify-between mb-4">
-                          <h2 className="text-black text-xs tracking-widest title-font mb-1">
+                          <h2 className={`text-sm rounded py-1 px-2 w-auto ${eventStatus === "Terminado"
+                              ? "bg-red-500 text-white"
+                              : eventStatus === "En curso"
+                                  ? "bg-yellow-500 text-white"
+                                  : "bg-green-500 text-white"
+                          }`}>
                             {evento.fecha}
                           </h2>
                         </div>
